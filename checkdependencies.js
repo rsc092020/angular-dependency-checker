@@ -6,7 +6,7 @@ module.exports = function (grunt) {
         var angularStructureRegex = /angular\.module\(.+\)\.(controller|service|factory|run|directive|filter)\([\s\S]+?\}\s*\]\s*\)\s*;/g,
             structureHeaderRegex = /function\s*\(.*\)/,
             structureHeaderRestrictiveRegex = /function\s*\(.+\)/,
-            dependencyNamesRegex = /\[('.+?',?\s*)+/;
+            dependencyNamesRegex = /\[\s*('.+?',?\s*)+/;
 
         var remove = grunt.option('remove') || false;
         var totalUnusedDependencies = 0;
